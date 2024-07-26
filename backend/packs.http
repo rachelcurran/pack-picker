@@ -1,0 +1,41 @@
+@baseUrl = http://localhost:8080
+
+### Get Packs
+### This is an endpoint which will return list of packs required to fill an order
+### of specified number of items 
+
+GET {{baseUrl}}/packs-old
+
+8999
+
+### Get Packs All in one 
+GET {{baseUrl}}/packs/all-in-one
+
+{
+  "numberOfItems": 700,
+  "packSizes" : [500, 250, 1000, 2000, 5000]
+}
+
+### Set Pack Sizes
+### This is an endpoint which will update the stored pack sizes 
+
+POST {{baseUrl}}/pack-sizes
+
+[300, 500, 1500]
+
+
+### Get Pack Sizes
+### This is an endpoint which will return the current list of pack sizes
+
+GET {{baseUrl}}/pack-sizes
+
+
+
+### Get Packs New 
+GET {{baseUrl}}/packs
+
+{
+  "numberOfItems": 32,
+  "packSizes" : [250, 500, 1000, 2000, 5000]
+}
+
