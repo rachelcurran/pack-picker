@@ -2,6 +2,7 @@ package main
 
 import (
     "net/http"
+    "os"
 
     "github.com/gin-gonic/gin"
     "fmt"
@@ -13,6 +14,12 @@ type getPacksRequest struct {
 }
 
 func main() {
+    port := os.Getenv("PORT")
+
+    if port == null || port == "" {
+        port = 8080;
+    }
+
     router := gin.Default()
     
     router.POST("/pack-sizes", setPackSizesHandler)
@@ -22,8 +29,7 @@ func main() {
 
     router.GET("/packs", getPacksHandler)
 
-
-    router.Run("localhost:8080")
+    router.Run(":" + port)
 }
 
 func setPackSizesHandler(c *gin.Context) {
