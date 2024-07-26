@@ -15,9 +15,11 @@ type getPacksRequest struct {
 
 func main() {
     port := os.Getenv("PORT")
+    host := ""
 
-    if port == null || port == "" {
-        port = 8080;
+    if port == "" {
+        port = "8080";
+        host = "localhost"
     }
 
     router := gin.Default()
@@ -29,7 +31,7 @@ func main() {
 
     router.GET("/packs", getPacksHandler)
 
-    router.Run(":" + port)
+    router.Run(host + ":" + port)
 }
 
 func setPackSizesHandler(c *gin.Context) {
