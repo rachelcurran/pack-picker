@@ -1,4 +1,4 @@
-module example/gymshark2024
+module github.com/rachelcurran/pack-picker
 
 go 1.22.5
 
