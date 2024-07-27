@@ -23,19 +23,23 @@ POST {{baseUrl}}/pack-sizes
 
 [300, 500, 1500]
 
-
 ### Get Pack Sizes
 ### This is an endpoint which will return the current list of pack sizes
 
 GET {{baseUrl}}/pack-sizes
 
-
-
 ### Get Packs New 
-GET {{baseUrl}}/packs
+POST {{baseUrl}}/packs
 
 {
-  "numberOfItems": 32,
+  "numberOfItems": 456,
   "packSizes" : [250, 500, 1000, 2000, 5000]
 }
 
+### Get Packs New 
+POST https://whispering-hollows-05368-f071ed37f19c.herokuapp.com/packs
+
+{
+  "numberOfItems": 20601,
+  "packSizes" : [250, 500, 1000, 2000, 5000]
+}
