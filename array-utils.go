@@ -1,5 +1,16 @@
 package main
 
+func sum (values []int) (int) {
+	
+	total := 0
+
+	for _, v := range values {
+		total += v
+	} 
+
+	return total
+}
+
 func contains (values []PackCombination, x int) bool {
 	for _, value := range values {
 		if value.Sum == x{

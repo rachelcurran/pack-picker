@@ -32,14 +32,14 @@ GET {{baseUrl}}/pack-sizes
 POST {{baseUrl}}/packs
 
 {
-  "numberOfItems": 456,
-  "packSizes" : [250, 500, 1000, 2000, 5000]
+  "numberOfItems": 700,
+  "packSizes" : [250, 500, 1000, 2000,5000]
 }
 
 ### Get Packs New 
 POST https://whispering-hollows-05368-f071ed37f19c.herokuapp.com/packs
 
 {
-  "numberOfItems": 20601,
-  "packSizes" : [250, 500, 1000, 2000, 5000]
+  "numberOfItems": 600,
+  "packSizes" : [300, 500, 1000]
 }

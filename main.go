@@ -29,6 +29,7 @@ func main() {
     router.GET("/packs-old", getPacksOldHandler)
     router.GET("/packs/all-in-one", getPacksAllInOneHandler)
 
+    // This is the main entry point 
     router.POST("/packs", getPacksHandler)
 
     router.Run(host + ":" + port)
@@ -100,7 +101,7 @@ func getPacksAllInOneHandler(c *gin.Context) {
         return
     }
 
-    if len(request.PackSizes) == 0 {
+    if len(request.PackSizes) < 2 {
         fmt.Println("Invalid pack sizes in request.")
         c.Writer.WriteHeader(http.StatusBadRequest)
         return
@@ -115,7 +116,6 @@ func getPacksHandler(c *gin.Context) {
     c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
     var request getPacksRequest
 
-    fmt.Println("hello?")
     if err := c.BindJSON(&request); err != nil {
         fmt.Println("Error parsing request.")
         c.Writer.WriteHeader(http.StatusBadRequest)
