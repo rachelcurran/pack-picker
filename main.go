@@ -134,6 +134,14 @@ func getPacksHandler(c *gin.Context) {
         return
     }
 
+    for _, packSize := range request.PackSizes {
+		if !(packSize > 0) {
+			fmt.Println("Invalid pack sizes in request.")
+            c.Writer.WriteHeader(http.StatusBadRequest)
+            return
+		}
+	}
+
     var packs = getPacks(request.NumberOfItems, request.PackSizes)
 
 	c.IndentedJSON(http.StatusOK, packs)
