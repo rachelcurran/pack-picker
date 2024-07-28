@@ -32,7 +32,7 @@ ___
 ### Notes
 * Unit tests for all calculations are included.
 * The front end may include a few small bugs so please do any major testing of the calculations at the API level.
-* Due to the method of calculation, certain pack sizes and number of items in order can take a very long time to process (and most likely will time out). This will likey occur when using large number for items in order with small pack sizes 
+* Due to the method of calculation, certain pack sizes and number of items in order can take a very long time to process (and most likely will time out). This will likely occur when using a large number for items in order along with small pack sizes 
 
 
     
