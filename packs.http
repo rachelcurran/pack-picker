@@ -18,21 +18,19 @@ GET {{baseUrl}}/packs/all-in-one
 
 ### Set Pack Sizes
 ### This is an endpoint which will update the stored pack sizes 
-
 POST {{baseUrl}}/pack-sizes
 
 [300, 500, 1500]
 
 ### Get Pack Sizes
 ### This is an endpoint which will return the current list of pack sizes
-
 GET {{baseUrl}}/pack-sizes
 
 ### Get Packs New 
 POST {{baseUrl}}/packs
 
 {
-  "numberOfItems": 700,
+  "numberOfItems": 12001,
   "packSizes" : [250, 500, 1000, 2000,5000]
 }
 
@@ -40,6 +38,6 @@ POST {{baseUrl}}/packs
 POST https://whispering-hollows-05368-f071ed37f19c.herokuapp.com/packs
 
 {
-  "numberOfItems": 600,
-  "packSizes" : [300, 500, 1000]
+  "numberOfItems": 12001,
+  "packSizes" : [250, 500, 1000, 2000,5000]
 }

@@ -128,7 +128,7 @@ func getPacksHandler(c *gin.Context) {
         return
     }
 
-    if len(request.PackSizes) == 0 {
+    if len(request.PackSizes) < 2  {
         fmt.Println("Invalid pack sizes in request.")
         c.Writer.WriteHeader(http.StatusBadRequest)
         return
