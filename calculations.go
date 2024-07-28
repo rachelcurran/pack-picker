@@ -34,7 +34,7 @@ func calculatePacks(packSizes []int, numberOfItems int) ([]int){
 	return packs
 }
 
-func calculatedAllPacksForCombinations(packSizes []int, numberOfItems int) []int{
+func calculateAllPacksForCombinations(packSizes []int, numberOfItems int) []int{
 	allPackSizes := []int{}
 
 	// For the given pack sizes get all required to reach the target, including multiples

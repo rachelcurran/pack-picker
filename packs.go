@@ -61,7 +61,7 @@ func getPacks(numberOfItems int, packSizes []int) ([]int){
 	sort.Sort(sort.IntSlice(packSizes))
 
 	// Get all packs that could be needed to reach every combination
-	allPackSizes := calculatedAllPacksForCombinations(packSizes, numberOfItems)
+	allPackSizes := calculateAllPacksForCombinations(packSizes, numberOfItems)
 
 	// Get all pack combinations that can be reached with given pack sizes
 	packCombinations := calculatePackCombinations(packSizes, allPackSizes, numberOfItems)
